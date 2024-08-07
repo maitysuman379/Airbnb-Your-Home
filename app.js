@@ -84,6 +84,7 @@ app.delete("/listings/:id", async (req, res) => {
 //     country: "India",
 //   });
 
+
 //   await sampleListing.save();
 //   console.log("sample was saved");
 //   res.send("successful testing");

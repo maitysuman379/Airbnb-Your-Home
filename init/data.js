@@ -134,6 +134,8 @@ const sampleListings = [
     location: "Bali",
     country: "Indonesia",
   },
+
+  
   {
     title: "Mountain View Cabin in Banff",
     description:
