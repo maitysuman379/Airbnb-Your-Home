@@ -100,3 +100,15 @@ body{
 .add-reset{
     margin-bottom: 1rem;
 }
+
+/* Show Page */
+
+.show-img{
+    height: 30vh;
+}
+
+.edit-del{
+    display: flex;
+    justify-content: center;
+    justify-content:space-evenly;
+}
