@@ -57,6 +57,18 @@ app.post("/listings", wrapAsync(async (req, res) => {
     throw new ExpressError(400,"Send valid data for listing");
   };
     const newListing = new Listing(req.body.listing);
+  if(!newListing.title){
+    throw new ExpressError(400,"title is missing");
+  };
+  if(!newListing.description){
+    throw new ExpressError(400,"description is missing");
+  }
+  if(!newListing.location){
+    throw new ExpressError(400,"location is missing");
+  }
+  if(!newListing.country){
+    throw new ExpressError(400,"country is missing");
+  }
     await newListing.save();
     res.redirect("/listings");
 }));
@@ -88,7 +100,7 @@ app.delete("/listings/:id", wrapAsync(async (req, res) => {
 
 //all Routes
 app.all("*",(req,res,next)=>{
-  let htmlTag = " Page Not Found! :( ";
+  let htmlTag = " Page Not Found! :(:( ";
   next(new ExpressError(404,htmlTag));
 });
 
