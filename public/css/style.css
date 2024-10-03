@@ -112,3 +112,7 @@ body{
     justify-content: center;
     justify-content:space-evenly;
 }
+
+.card-review{
+    background-color: aqua !important;
+}
